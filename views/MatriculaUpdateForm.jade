@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    //- Necesito estos cuatro campos:
+        apellido
+        nombre
+        id
+        email
+    form(method='post')
+        div(class='form-group')
+            label(for='id') id
+            input(value ='#{matricula.id}' name='id'  class='form-control' type='number' required)
+        div(class='form-group')
+            label(for='nombre') Introducir Nombre del alumno:
+            select(value ='#{matricula.alumno.nombre}' name='alumno'  class='form-control' required)
+                each alumno in alumnos
+                    option(value='#{alumno._id}') #{alumno.nombre} #{alumno.apellido}
+        div(class='form-group')
+            label(for='fecha_ini') Fecha de inicio
+            input(value ='#{matricula.fecha_ini}' name='fecha_ini'  class='form-control' type='text' required)
+        div(class='form-group')
+            label(for='fecha_fin') Fecha de fin
+            input(value ='#{matricula.fecha_fin}' name='fecha_fin'  class='form-control' type='text' required)
+        div(class='form-group')
+            label(for='asignatura') Asignatura:
+            select(value ='#{matricula.asignatura.nombre}' name='asignatura'  class='form-control'  required)
+                each asignatura in asignaturas
+                    option(value='#{asignatura._id}') #{asignatura.nombre}
+        div(class='form-group')
+            button(type='submit' name ='_id' value='#{matricula._id}') Enviar

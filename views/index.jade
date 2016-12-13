@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  
+  h2 Welcome to #{title}
+  div(class='well')
+        table(class='table')
+            tr
+                th(rowspan='4') ALUMNO
+                td 
+                    a(href='AlumnoCreate') Create
+            tr
+                td 
+                    a(href='AlumnoRead') Read
+            tr
+                td 
+                    a(href='AlumnoUpdate') Update
+            tr
+                td 
+                    a(href='AlumnoDelete') Delete 
+            tr
+                th(rowspan='4') PROFESOR
+                td 
+                    a(href='ProfesorCreate') Create
+            tr
+                td 
+                    a(href='ProfesorRead') Read
+            tr
+                td 
+                    a(href='ProfesorUpdate') Update
+            tr
+                td 
+                    a(href='ProfesorDelete') Delete
+            tr
+                th(rowspan='4') ASIGNATURA
+                td 
+                    a(href='AsignaturaCreate') Create
+            tr
+                td 
+                    a(href='AsignaturaRead') Read
+            tr
+                td 
+                    a(href='AsignaturaUpdate') Update
+            tr
+                td 
+                    a(href='AsignaturaDelete') Delete
+            tr
+                th(rowspan='4') MATRICULACIÓN
+                td 
+                    a(href='MatriculaCreate') Create
+            tr
+                td 
+                    a(href='MatriculaRead') Read
+            tr
+                td 
+                    a(href='MatriculaUpdate') Update
+            tr
+                td 
+                    a(href='MatriculaDelete') Delete
+            tr
+                th(rowspan='4') IMPARTIR
+                td 
+                    a(href='ImpartirCreate') Create
+            tr
+                td 
+                    a(href='ImpartirRead') Read
+            tr
+                td 
+                    a(href='ImpartirUpdate') Update
+            tr
+                td 
+                    a(href='ImpartirDelete') Delete
+

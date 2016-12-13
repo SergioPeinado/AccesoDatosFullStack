@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    //- Necesito estos cuatro campos:
+        apellido
+        nombre
+        id
+        email
+    form(method='post')
+        div(class='form-group')
+            label(for='id') id:
+            input(name='id', class='form-control',type='number',required)
+        div(class='form-group')
+            label(for='profesor') Nombre del profesor:
+            select(name='profesor', class='form-control',required)
+                each profesor in profesores
+                    option(value='#{profesor._id}') #{profesor.nombre}
+        div(class='form-group')
+           label(for='horas') horas:
+           input(name='horas', class='form-control', type='text', required)     
+        div(class='form-group')
+            label(for='fecha_ini') Fecha de Inicio:
+            input(name='fecha_ini', class='form-control',type='date',required)
+        div(class='form-group')
+            label(for='fecha_fin') Fecha fin:
+            input(name='fecha_fin', class='form-control',type='date',required)
+        div(class='form-group')
+            label(for='asignatura') Asignatura:
+            select(name='asignatura', class='form-control', required)
+                each asignatura in asignaturas
+                    option(value='#{asignatura._id}') #{asignatura.nombre}
+    
+        div(class='form-group')
+            button(type="submit") Enviar
